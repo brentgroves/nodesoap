@@ -1,6 +1,7 @@
 var soap = require('soap');
-var prodURL = 'https://api.plexonline.com/DataSource/Service.asmx?WSDL';
-var testURL = 'https://testapi.plexonline.com/DataSource/Service.asmx?WSDL';
+// At the bottom of the wsdl file you will find the http address of the service
+var prodURL = '/plex-pro.wsdl';
+var testURL = '/plex-test.wsdl';
 // https://developers.redhat.com/blog/2016/02/19/apps-101-an-absolute-beginners-guide-to-integrating-with-a-node-js-backend/
 //API Blueprint
 var request_data = {
@@ -17,7 +18,8 @@ var request_data = {
   },
 };
 var args = {name: 'value'};
-var plexWSDL = __dirname + '/plex.wsdl';
+var plexWSDL = __dirname + prodURL;
+//var plexWSDL = __dirname + testURL;
 
 soap.createClient(plexWSDL, function(err, client) {
   debugger;
