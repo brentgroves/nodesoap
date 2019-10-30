@@ -132,7 +132,8 @@ async function getProdContainer() {
 
 function main() {
   var client = mqtt.connect(
-    'mqtt://ec2-18-218-2-29.us-east-2.compute.amazonaws.com',
+    'mqtt://192.168.254.250', //home
+    // 'mqtt://ec2-18-218-2-29.us-east-2.compute.amazonaws.com',
   );
   // var client  = mqtt.connect('mqtt://test.mosquitto.org')
 
