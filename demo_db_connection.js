@@ -24,7 +24,7 @@ con.connect(function(err) {
     let minutes = date_ob.getMinutes();
     let seconds = date_ob.getSeconds();
     let dateTime = `${year}-${month}-${date} ${hours}:${minutes}:${seconds}`;
-  let sql = `insert into cnc422 (datetime,p1ProdQuantity,p1TestQuantity,p2ProdQuantity,p2TestQuantity) values ("${dateTime}",12,12,14,14)`;
+  let sql = `insert into ProdVrsTest (datetime,p1ProdQuantity,p1TestQuantity,p2ProdQuantity,p2TestQuantity) values ("${dateTime}",12,12,14,14)`;
     console.log(sql);
   // let sql = 'select * from test';
   if (err) throw err;
